@@ -5,34 +5,31 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.6.4</version>
+        <version>2.4.5</version>
         <relativePath/> <!-- lookup parent from repository -->
-
     </parent>
-    <groupId>com.example</groupId>
-    <artifactId>SpringBoot</artifactId>
+    <groupId>br.com.feltex</groupId>
+    <artifactId>academicnet</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>SpringBoot</name>
-    <description>SpringBoot</description>
+    <name>academicnet</name>
+    <packaging>war</packaging>
+    <description>Projeto completo Spring Boot</description>
     <properties>
         <java.version>11</java.version>
     </properties>
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
+            <artifactId>spring-boot-starter-data-jpa</artifactId>
         </dependency>
-
         <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-devtools</artifactId>
-            <scope>disable</scope>
-
+            <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
-            <version>8.0.28</version>
+            <version>8.0.19</version>
         </dependency>
         <dependency>
             <groupId>org.projectlombok</groupId>
@@ -44,22 +41,7 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
-        <dependency>
-            <groupId>org.springframework.data</groupId>
-            <artifactId>spring-data-jpa</artifactId>
-            <version>2.6.2</version>
-        </dependency>
-        <dependency>
-            <groupId>javax.persistence</groupId>
-            <artifactId>javax.persistence-api</artifactId>
-            <version>2.2</version>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-data-jpa</artifactId>
-        </dependency>
-
-
+        <!--		Configuração JSF-->
         <dependency>
             <groupId>com.sun.faces</groupId>
             <artifactId>jsf-api</artifactId>
@@ -73,8 +55,9 @@
         <dependency>
             <groupId>org.primefaces</groupId>
             <artifactId>primefaces</artifactId>
-            <version>11.0.0</version>
+            <version>8.0</version>
         </dependency>
+
         <dependency>
             <groupId>org.apache.tomcat.embed</groupId>
             <artifactId>tomcat-embed-jasper</artifactId>
@@ -125,8 +108,16 @@
             <artifactId>spring-boot-devtools</artifactId>
             <scope>runtime</scope>
         </dependency>
+
+        <dependency>
+            <groupId>org.primefaces.themes</groupId>
+            <artifactId>all-themes</artifactId>
+            <version>1.0.10</version>
+        </dependency>
+
         <!--		Configuração JSF-->
     </dependencies>
+
 
     <build>
         <finalName>${project.artifactId}</finalName>
@@ -175,5 +166,6 @@
             <name>jcenter</name>
             <url>https://jcenter.bintray.com</url>
         </repository>
+
     </repositories>
 </project>
